@@ -1,0 +1,186 @@
+- "Entertainment & Media":
+    - Jellyfin:
+        icon: jellyfin.svg
+        href: http://donthaveoneyet
+        description: Watch Movies & TV Shows
+        server: opi_docker
+        container: jellyfin
+        showStats: true
+        widget:
+          type: jellyfin
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+
+    - Navidrome:
+        icon: navidrome.svg
+        href: http://donthaveoneyet
+        description: Listen To Music
+        server: opi_docker
+        container: navidrome
+        showStats: true
+        widget:
+          type: navidrome
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+
+    - Radarr:
+        icon: radarr.svg
+        href: http://donthaveoneyet
+        description: Manage Movie Library
+        server: opi_docker
+        container: radarr
+        showStats: true
+        widget:
+          type: radarr
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+          fields: ["wanted", "queued", "movies"]
+
+    - Sonarr:
+        icon: sonarr.svg
+        href: http://donthaveoneyet
+        description: Manage TV Show Library
+        server: opi_docker
+        container: sonarr
+        showStats: true
+        widget:
+          type: sonarr
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+          fields: ["wanted", "queued", "series"]
+
+    - Lidarr:
+        icon: lidarr.svg
+        href: http://donthaveoneyet
+        description: Manage Music Library
+        server: opi_docker
+        container: lidarr
+        showStats: true
+        widget:
+          type: lidarr
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+          fields: ["wanted", "queued", "artists"]
+
+    - Bazarr:
+        icon: bazarr.svg
+        href: http://donthaveoneyet
+        description: Manage Subtitles
+        server: opi_docker
+        container: bazarr
+        showStats: true
+        widget:
+          type: bazarr
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+          fields: ["missingEpisodes", "missingMovies"]
+
+- "Productivity & Documents":
+    - Nextcloud:
+        icon: nextcloud.svg
+        href: http://donthaveoneyet
+        description: Access & Edit Your Files
+        server: opi_docker
+        container: nextcloud
+        showStats: true
+        widget:
+          type: nextcloud
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+
+    - Joplin:
+        icon: joplin.svg
+        href: http://donthaveoneyet
+        description: Note Taking & To-Do Lists
+        server: opi_docker
+        container: joplin
+        showStats: true
+
+    - Immich:
+        icon: immich.svg
+        href: http://donthaveoneyet
+        description: Photo & Video Management
+        server: opi_docker
+        container: immich
+        showStats: true
+        widget:
+          type: immich
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+
+    - Vaultwarden:
+        icon: bitwarden.svg
+        href: http://donthaveoneyet
+        description: Password Management
+        server: opi_docker
+        container: vaultwarden
+        showStats: true
+
+    - VS Code Server:
+        icon: visual-studio-code.svg
+        href: http://donthaveoneyet
+        description: Online Code Editor
+        server: opi_docker
+        container: vscode_server
+        showStats: true
+
+- "Device & Connectivity":
+    - Pi-Hole:
+        icon: pi-hole.svg
+        href: http://donthaveoneyet
+        description: Network-wide Ad Blocking
+        server: opi_docker
+        container: pihole
+        showStats: true
+        widget:
+          type: pihole
+          url: http://donthaveoneyet
+          key: donthaveoneyet
+          fields: ["queries", "blocked", "blocked_percent", "gravity"]
+
+    - Netdata:
+        icon: netdata.svg
+        href: http://donthaveoneyet
+        description: Real-time Performance Monitoring
+        server: opi_docker
+        container: netdata
+        showStats: true
+        widget:
+          type: netdata
+          url: http://donthaveoneyet
+
+    - Homepage:
+        href: http://localhost:3000
+        icon: homepage.png
+        description: Dashboard
+        server: opi_docker
+        container: homepage
+        showStats: true
+
+    - Watchtower:
+        icon: watchtower.svg
+        href: http://donthaveoneyet
+        description: Monitor & Update Containers
+        server: opi_docker
+        container: watchtower
+        showStats: true
+
+    - Tailscale:
+        icon: tailscale.svg
+        href: http://donthaveoneyet
+        description: Secure VPN Access
+        server: opi_docker
+        container: tailscale
+        showStats: true
+
+    - Minecraft Server:
+        icon: minecraft.svg
+        href: http://donthaveoneyet
+        description: Monitor Minecraft Server
+        server: opi_docker
+        container: mc_server
+        showStats: true
+        widget:
+          type: minecraft
+          url: udp://donthaveoneyet:25565
+          fields: ["players", "version", "status"]
