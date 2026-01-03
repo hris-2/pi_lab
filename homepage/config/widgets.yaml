@@ -1,27 +1,33 @@
+- logo:
+    icon: C:\docker\homepage\images\logo.png
+
 - search:
     provider: duckduckgo
     focus: false
-    showSearchSuggestions: false
+    showSearchSuggestions: true
     target: _self
 
 - datetime:
     text_size: md
     format:
-      dataStyle: short
+      dateStyle: short
       timeStyle: short
       hourCycle: h23
 
 - openmeteo: 
-    label: Stoke-On-Trent
+    label: Stoke
     latitude: 53.002666
     longitude: -2.17944
     units: metric
     cache: 5
 
 - resources:
-    label: CPU
+    label: Resources
     cpu: true
     cputemp: true
+    memory: true
+    disk: C:/
+    uptime: true
     expanded: true
     units: metric
 
