@@ -23,7 +23,7 @@
           url: http://navidrome.lab
           key: api
 
-    - Overseer:
+    - Overseerr:
         icon: overseer.svg
         href: http://overseer.lab
         description: Unifed Place To Request And Manage Media
@@ -45,7 +45,7 @@
         showStats: true
         widget:
           type: radarr
-          url: http://donthaveoneyet
+          url: http://radarr.lab
           key: apikey
           fields: ["wanted", "missing", "queued", "movies"]
 
@@ -96,10 +96,25 @@
         container: prowlarr
         showStats: true
         widget:
-            type: bazarr
+            type: prowlarr
             url: http://prowlarr.lab
             key: apikey
-            fields: ["numberOfGrabs", "numberOfQueries", "numberOfFailGrabs", "numberOffFailQueries"]
+            fields: ["numberOfGrabs", "numberOfQueries", "numberOfFailGrabs", "numberOfFailQueries"]
+
+    - qBittorrent:
+        icon: qbittorrent.svg
+        href: http://qbittorrent.lab
+        description: Torrent Client For 'arr' Apps
+        server: opi_docker
+        container: qbittorrent
+        showStats: true
+        widget:
+            type: qbittorrent
+            url: http://qbittorrent.lab
+            username: username
+            password: password
+            enableLeechProgress: true
+            fields: ["leech", "download", "seed", "upload"]
 
 - "Productivity & Documents":
     - Nextcloud:
@@ -136,6 +151,52 @@
           key: apikey
           fields: ["users", "photos", "videos", "storage"]
 
+    - Vikunja:
+        icon: vikunja.svg
+        href: http://todo.lab
+        description: To Do List and Task Manager
+        server: opi_docker
+        container: vikunja
+        showStats: true
+        widget:
+            type: vikunja
+            url: http://todo.lab
+            key: apikey
+            enableTaskList: true
+            fields: ["projects", "task7d", "tasksOverdue", "tasksInProgress"]
+
+    - Bookstack:
+        icon: bookstack.svg
+        href: http://bookstack.lab
+        description: Detailed Documention Writer
+        server: opi_docker
+        container: bookstack
+        showStats: true
+
+    - Fittrack:
+        icon: fittrack.svg
+        href: http://fittrack.lab
+        description: Fittness and Workout Manager
+        server: opi_docker
+        container: fittrack
+        showStats: true
+
+    - Weehealth:
+        icon: weehealth.svg
+        href: http://weehealth.lab
+        description: Weight and Health Tracker
+        server: opi_docker
+        container: weehealth
+        showStats: true
+
+    - Mealie:
+        icon: mealie.svg
+        href: http://mealie.lab
+        description: Meal Planner and Calorie Tracker
+        server: opi_docker
+        container: mealie
+        showStats: true
+
     - Vaultwarden:
         icon: bitwarden.svg
         href: http://passwords.lab
@@ -151,6 +212,11 @@
         server: opi_docker
         container: vscode_server
         showStats: true
+
+    - Linux VM:
+        icon: linux.svg
+        href: http://linuxvm.lab
+        description: Accessable Linux Virtual Machine
 
 - "Device & Connectivity":
     - Pi-Hole:
@@ -208,7 +274,7 @@
         server: opi_docker
         container: watchtower
         showStats: true
-        widgets:
+        widget:
             type: watchtower
             url: http://watchtower.lab
             key: apikey
