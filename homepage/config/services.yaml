@@ -1,31 +1,44 @@
 - "Entertainment & Media":
     - Jellyfin:
         icon: jellyfin.svg
-        href: http://donthaveoneyet
+        href: http://jellyfin.lab
         description: Watch Movies & TV Shows
         server: opi_docker
         container: jellyfin
         showStats: true
         widget:
           type: jellyfin
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://jellyfin.lab
+          key: apikey
 
     - Navidrome:
         icon: navidrome.svg
-        href: http://donthaveoneyet
+        href: http://navidrome.lab
         description: Listen To Music
         server: opi_docker
         container: navidrome
         showStats: true
         widget:
           type: navidrome
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://navidrome.lab
+          key: api
+
+    - Overseer:
+        icon: overseer.svg
+        href: http://overseer.lab
+        description: Unifed Place To Request And Manage Media
+        server: opi_docker
+        container: overseer
+        showStats: true
+        widget:
+            type: overseer
+            url: http://overseer.lab
+            key: apikey
+            fields: ["pending", "approved", "available", "processing"]
 
     - Radarr:
         icon: radarr.svg
-        href: http://donthaveoneyet
+        href: http://radarr.lab
         description: Manage Movie Library
         server: opi_docker
         container: radarr
@@ -33,64 +46,78 @@
         widget:
           type: radarr
           url: http://donthaveoneyet
-          key: donthaveoneyet
-          fields: ["wanted", "queued", "movies"]
+          key: apikey
+          fields: ["wanted", "missing", "queued", "movies"]
 
     - Sonarr:
         icon: sonarr.svg
-        href: http://donthaveoneyet
+        href: http://sonarr.lab
         description: Manage TV Show Library
         server: opi_docker
         container: sonarr
         showStats: true
         widget:
           type: sonarr
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://sonarr.lab
+          key: apikey
           fields: ["wanted", "queued", "series"]
 
     - Lidarr:
         icon: lidarr.svg
-        href: http://donthaveoneyet
+        href: http://lidarr.lab
         description: Manage Music Library
         server: opi_docker
         container: lidarr
         showStats: true
         widget:
           type: lidarr
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://lidarr.lab
+          key: apikey
           fields: ["wanted", "queued", "artists"]
 
     - Bazarr:
         icon: bazarr.svg
-        href: http://donthaveoneyet
+        href: http://bazarr.lab
         description: Manage Subtitles
         server: opi_docker
         container: bazarr
         showStats: true
         widget:
           type: bazarr
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://bazarr.lab
+          key: apikey
           fields: ["missingEpisodes", "missingMovies"]
+
+    - Prowlarr:
+        icon: prowlarr.svg
+        href: http://prowlarr.lab
+        description: Indexer For Other 'arr' Apps
+        server: opi_docker
+        container: prowlarr
+        showStats: true
+        widget:
+            type: bazarr
+            url: http://prowlarr.lab
+            key: apikey
+            fields: ["numberOfGrabs", "numberOfQueries", "numberOfFailGrabs", "numberOffFailQueries"]
 
 - "Productivity & Documents":
     - Nextcloud:
         icon: nextcloud.svg
-        href: http://donthaveoneyet
+        href: http://nextcloud.lab
         description: Access & Edit Your Files
         server: opi_docker
         container: nextcloud
         showStats: true
         widget:
           type: nextcloud
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://nextcloud.lab
+          key: apikey
+          fields: ["freespace", "activeusers", "numfiles", "numshares"]
 
     - Joplin:
         icon: joplin.svg
-        href: http://donthaveoneyet
+        href: http://joplin.lab
         description: Note Taking & To-Do Lists
         server: opi_docker
         container: joplin
@@ -98,19 +125,20 @@
 
     - Immich:
         icon: immich.svg
-        href: http://donthaveoneyet
+        href: http://immich.lab
         description: Photo & Video Management
         server: opi_docker
         container: immich
         showStats: true
         widget:
           type: immich
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://immich.lab
+          key: apikey
+          fields: ["users", "photos", "videos", "storage"]
 
     - Vaultwarden:
         icon: bitwarden.svg
-        href: http://donthaveoneyet
+        href: http://passwords.lab
         description: Password Management
         server: opi_docker
         container: vaultwarden
@@ -118,7 +146,7 @@
 
     - VS Code Server:
         icon: visual-studio-code.svg
-        href: http://donthaveoneyet
+        href: http://vscode.lab
         description: Online Code Editor
         server: opi_docker
         container: vscode_server
@@ -127,51 +155,100 @@
 - "Device & Connectivity":
     - Pi-Hole:
         icon: pi-hole.svg
-        href: http://donthaveoneyet
+        href: http://pihole.lab
         description: Network-wide Ad Blocking
         server: opi_docker
         container: pihole
         showStats: true
         widget:
           type: pihole
-          url: http://donthaveoneyet
-          key: donthaveoneyet
+          url: http://pihole.lab
+          version: 6
+          key: apikey
           fields: ["queries", "blocked", "blocked_percent", "gravity"]
 
     - Netdata:
         icon: netdata.svg
-        href: http://donthaveoneyet
+        href: http://netdata.lab
         description: Real-time Performance Monitoring
         server: opi_docker
         container: netdata
         showStats: true
         widget:
           type: netdata
-          url: http://donthaveoneyet
+          url: http://netdata.lab
+          fields: ["warnings", "critcals"]
 
     - Homepage:
-        href: http://localhost:3000
+        href: http://home.lab
         icon: homepage.png
         description: Dashboard
         server: opi_docker
         container: homepage
         showStats: true
 
+    - Authentik: 
+        href: http://auth.lab
+        icon: authentik.svg
+        description: Global Authentication
+        server: opi_docker
+        container: authentik
+        showStats: true
+        widget:
+            type: authentik
+            url: http://auth.lab
+            key: apikey
+            version: 2
+            fields: ["users", "loginsLast24H", "faildLogins24H"]
+
     - Watchtower:
         icon: watchtower.svg
-        href: http://donthaveoneyet
+        href: http://watchtower.lab
         description: Monitor & Update Containers
         server: opi_docker
         container: watchtower
         showStats: true
+        widgets:
+            type: watchtower
+            url: http://watchtower.lab
+            key: apikey
+            fields: ["containers_scanned", "containers_updated", "containers_failed"]
 
     - Tailscale:
         icon: tailscale.svg
         href: http://donthaveoneyet
-        description: Secure VPN Access
+        description: Secure VPN Access To The Orange Pi
         server: opi_docker
         container: tailscale
         showStats: true
+
+    - Traefik:
+        icon: traefik.svg
+        href: http://traefik.lab
+        description: Correctly Route Incoming Traffic
+        server: opi_docker
+        container: traefik
+        showStats: true
+        widget:
+            type: traefik
+            url: http://traefik.lab
+            username: username
+            password: 
+            fields: ["routers", "services", "middleware"]
+
+    - Gluetun:
+        icon: gluetun.svg
+        href: http://gluetun.lab
+        description: VPN Container 
+        server: opi_docker
+        container: gluetun
+        showStats: true
+        widget:
+            type: gluetun
+            url: http://gluetun.lab
+            key: apikey
+            version: 2
+            fields: ["public_ip", "region", "country", "port_forwarded"]
 
     - Minecraft Server:
         icon: minecraft.svg
