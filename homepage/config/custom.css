@@ -1,0 +1,27 @@
+[data-theme="dark"] {
+  --background-color: #000000;      
+  --card-background: #000000cc;
+  --text-color: #ffffff;             
+  --accent-color: #475d7d;            
+}
+
+[data-theme="dark"] body {
+  background-image: url("C:docker/homepage/images/background-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+[data-theme="light"] {
+  --background-color: #ff98d3;        
+  --card-background: #ffffffcc;
+  --text-color: #5a5a5a;              
+  --accent-color: #ff86c3;            
+}
+
+[data-theme="light"] body {
+  background-image: url("c:docker/homepage/images/background-light.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

@@ -1,9 +1,6 @@
 title: PiLab Dashboard
 favicon: C:\docker\homepage\images\favicon.ico
-background: C:\docker\homepage\images\background.png
 cardblur: xs
-theme: dark
 color: slate
 headerStyle: boxed
 language: en
-
