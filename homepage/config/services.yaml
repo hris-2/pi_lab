@@ -173,28 +173,28 @@
         container: bookstack
         showStats: true
 
-    - Fittrack:
-        icon: fittrack.svg
-        href: http://fittrack.lab
+    - WGER:
+        icon: wger.svg
+        href: http://wger.lab
         description: Fitness and Workout Manager
         server: opi_docker
-        container: fittrack
+        container: wger
         showStats: true
 
-    - Weehealth:
-        icon: weehealth.svg
-        href: http://weehealth.lab
+    - OpenHealth:
+        icon: openhealth.svg
+        href: http://openhealth.lab
         description: Weight and Health Tracker
         server: opi_docker
-        container: weehealth
+        container: openhealth
         showStats: true
 
-    - Mealie:
-        icon: mealie.svg
-        href: http://mealie.lab
+    - Kalorie:
+        icon: kalorie.svg
+        href: http://kalorie.lab
         description: Meal Planner and Calorie Tracker
         server: opi_docker
-        container: mealie
+        container: kalorie
         showStats: true
 
     - Vaultwarden:
@@ -302,19 +302,19 @@
         container: tailscale
         showStats: true
 
-    - Traefik:
-        icon: traefik.svg
-        href: http://traefik.lab
+    - NGINX Proxy Manager:
+        icon: nginx.svg
+        href: http://proxy.lab
         description: Reverse Proxy and Traffic Router
         server: opi_docker
-        container: traefik
+        container: nginx 
         showStats: true
         widget:
-            type: traefik
-            url: http://traefik.lab
+            type: npm
+            url: http://proxy.lab
             username: username
             password: password
-            fields: ["routers", "services", "middleware"]
+            fields: ["enabled", "disabled", "total"]
 
     - Gluetun:
         icon: gluetun.svg
